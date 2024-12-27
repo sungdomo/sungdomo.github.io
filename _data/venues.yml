@@ -1,9 +1,32 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"CGO":
+  color: "#0085CA"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ICS":
+  color: "#0085CA"
 
-"Vision":
-  color: "#009f36"
+"PPoPP":
+  color: "#0085CA"
+
+"ICPP":
+  color: "#0085CA"
+
+"CNCC":
+  color: "#0085CA"
+
+"LCR":
+  color: "#27AE60"
+
+"IJPP":
+  color: "#E67E22"
+
+"TPDS":
+  color: "#E67E22"
+
+"SP":
+  color: "#E67E22"
+
+"USC TR":
+  color: "#990000"
+
+"Dissertation":
+  color: "#990000"
