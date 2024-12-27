@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Advisor @ MX, Samsung Electronics
+subtitle:
 
 profile:
   align: right
@@ -24,7 +24,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-EVP @ System R&D Team, MX, [Samsung Electronics](https://samsung.com/)<BR>
+Advisor @ MX (Mobile eXperience), [Samsung Electronics](https://samsung.com/)<BR>
+<BR>
+Corporate EVP @ System R&D Team, MX, [Samsung Electronics](https://samsung.com/)<BR>
 SW Engineer @ Java, Compilers & Tools Lab, [Hewlett-Packard Company](https://hpe.com/)<BR>
 PhD/MS @ [Computer Science](https://cs.usc.edu/), [University Southern California](https://usc.edu/)<BR>
 BS @ [Physics](https://physics.snu.ac.kr/)/[Computer Engeneering](https://cse.snu.ac.kr/), [Seoul National University](https://snu.ac.kr/)
