@@ -6,21 +6,7 @@
     "email": "sungdo.moon@gmail.com",
     "phone": "+82 10-4320-0580",
     "url": "https://sungdomo.github.io/",
-    "summary": "",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "Seongnam",
-      "countryCode": "KR",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "summary": ""
   },
   "work": [
     {
@@ -88,7 +74,7 @@
     {
       "institution": "Seoul National University",
       "location": "Seoul, Korea",
-      "url": "https://snu.edu/",
+      "url": "https://snu.ac.kr/",
       "area": "Physics, Computer Engineering",
       "studyType": "BS",
       "startDate": "1987-03",
