@@ -19,12 +19,13 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
 Advisor @ MX (Mobile eXperience), [Samsung Electronics](https://samsung.com/)<BR>
+Adjunct Professor @ [ITCEC, Dongguk University](https://itcec.dongguk.edu/)<BR>
 <BR>
 Corporate EVP @ System R&D Team, MX, [Samsung Electronics](https://samsung.com/)<BR>
 SW Engineer @ Java, Compilers & Tools Lab, [Hewlett-Packard Company](https://hpe.com/)<BR>

@@ -9,7 +9,7 @@ acm_id: 81452618581 # your dl.acm.org/profile/id
 # arxiv_id: # your arXiv author ID
 # blogger_url: # your blogger URL
 bluesky_url: https://bsky.app/profile/sungdomo.bsky.social # your bluesky URL
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
+# cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
 email: sungdo.moon@gmail.com # your email address
@@ -35,8 +35,8 @@ orcid_id: 0009-0004-3662-906X # your ORCID ID
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
-rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
+# rss_icon: true # comment this line to hide the RSS icon
+scholar_userid: PuD26bsAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
