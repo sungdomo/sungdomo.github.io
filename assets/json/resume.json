@@ -10,12 +10,20 @@
   },
   "work": [
     {
-      "name": "MX (Mobile eXperience), Samsung Electronics",
+      "name": "MX Business Unit, Samsung Electronics",
       "position": "Corporate EVP",
-      "startDate": "2020-12",
+      "startDate": "2021-12",
       "endDate": "2024-11",
       "summary": "System R&D Team Lead",
       "highlights": ["On-device AI"]
+    },
+    {
+      "name": "MX Business Unit, Samsung Electronics",
+      "position": "Corporate SVP",
+      "startDate": "2020-12",
+      "endDate": "2021-11",
+      "summary": "System S/W R&D Team & CP R&D Team Lead",
+      "highlights": ["Android system"]
     },
     {
       "name": "Mobile Business Unit, Samsung Electronics",
@@ -47,7 +55,7 @@
       "startDate": "2000-10",
       "endDate": "2007-07",
       "summary": "Java, Compilers, and Tools Lab",
-      "highlights": ["HPUX Itanium Compilers"]
+      "highlights": ["HP/UX Itanium compilers"]
     }
   ],
   "education": [
