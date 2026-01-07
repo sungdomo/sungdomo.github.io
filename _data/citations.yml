@@ -1,51 +1,115 @@
 metadata:
-  last_updated: '2025-12-25'
+  last_updated: '2026-01-07'
 papers:
-  PuD26bsAAAAJ:-u5HHmVD_uO8C:
-    citations: 100
-    title: A tile selection algorithm for data locality and cache interference
-    year: 1999
-  PuD26bsAAAAJ:-u-x6o8ySG0sC:
-    citations: 51
-    title: Evaluation of predicated array data-flow analysis for automatic parallelization
-    year: 1999
-  PuD26bsAAAAJ:-d1gkVwhDpl0C:
-    citations: 40
-    title: Predicated array data-flow analysis for run-time parallelization
-    year: 1998
-  PuD26bsAAAAJ:-9yKSN-GCB0IC:
-    citations: 32
-    title: The combined effectiveness of unimodular transformations, tiling, and software prefetching
-    year: 1996
-  PuD26bsAAAAJ:-UeHWp8X0CEIC:
-    citations: 25
-    title: SYZYGY-a framework for scalable cross-module IPO
-    year: 2024
-  PuD26bsAAAAJ:-qjMakFHDy7sC:
-    citations: 24
-    title: Measuring the effectiveness of automatic parallelization in SUIF
-    year: 1998
-  PuD26bsAAAAJ:-2osOgNQ5qMEC:
+  PuD26bsAAAAJ:2osOgNQ5qMEC:
     citations: 22
     title: Evaluating automatic parallelization in SUIF
-    year: 1997
-  PuD26bsAAAAJ:-IjCSPb-OGe4C:
-    citations: 12
-    title: Hyperblocking A data reorganization method to eliminate cache conflicts in tiled loop nests
-    year: 1998
-  PuD26bsAAAAJ:-Tyk-4Ss8FVUC:
-    citations: 11
-    title: A case for combining compile-time and run-time parallelization
-    year: 1998
-  PuD26bsAAAAJ:-zYLM7Y9cAGgC:
-    citations: 10
-    title: Adaptive granularity Transparent integration of fine-and coarse-grain communication
-    year: 1997
+    year: '2000'
   PuD26bsAAAAJ:2tRrZ1ZAMYUC:
     citations: 7
     title: Maximizing synchronization coverage via controlling thread schedule
-    year: 2011
+    year: '2011'
+  PuD26bsAAAAJ:4xDN1ZYqzskC:
+    citations: 7
+    title: Apparatus and method for on-demand optimization of applications
+    year: '2016'
+  PuD26bsAAAAJ:5nxA0vEk-isC:
+    citations: 27
+    title: Apparatus and method for executing instrumentation code
+    year: '2011'
+  PuD26bsAAAAJ:8k81kl-MbHgC:
+    citations: 1
+    title: Coverage apparatus and method for testing multithreading environment
+    year: '2012'
+  PuD26bsAAAAJ:9yKSN-GCB0IC:
+    citations: 32
+    title: The combined effectiveness of unimodular transformations, tiling, and software prefetching
+    year: '1996'
+  PuD26bsAAAAJ:IjCSPb-OGe4C:
+    citations: 12
+    title: 'Hyperblocking: A data reorganization method to eliminate cache conflicts in tiled loop nests'
+    year: '1998'
+  PuD26bsAAAAJ:LkGwnXOMwfcC:
+    citations: 5
+    title: Coverage apparatus and method for testing multi-thread environment
+    year: '2011'
+  PuD26bsAAAAJ:MXK_kJrjxJIC:
+    citations: 1
+    title: Apparatus and method for controlling loop schedule of a parallel program
+    year: '2012'
+  PuD26bsAAAAJ:NyGDZy8z5eUC:
+    citations: 17
+    title: Instrumentation apparatus and method
+    year: '2012'
+  PuD26bsAAAAJ:PVgj2kMGcgYC:
+    citations: 2
+    title: Method of analyzing single thread access of variable in multi-threaded program
+    year: '2013'
+  PuD26bsAAAAJ:Se3iqnhoufwC:
+    citations: 7
+    title: Apparatus and method for detecting false sharing
+    year: '2014'
+  PuD26bsAAAAJ:Tyk-4Ss8FVUC:
+    citations: 11
+    title: A case for combining compile-time and run-time parallelization
+    year: '1998'
+  PuD26bsAAAAJ:ULOm3_A8WrAC:
+    citations: 4
+    title: Apparatus and method for detecting data race
+    year: '2012'
+  PuD26bsAAAAJ:UeHWp8X0CEIC:
+    citations: 25
+    title: SYZYGY-a framework for scalable cross-module IPO
+    year: '2004'
+  PuD26bsAAAAJ:W7OEmFMy1HYC:
+    citations: 11
+    title: Cloning programming code
+    year: '2008'
+  PuD26bsAAAAJ:WF5omc3nYNoC:
+    citations: 11
+    title: Cross-module in-lining
+    year: '2008'
   PuD26bsAAAAJ:Y0pCki6q_DkC:
     citations: 1
-    title: Combining Compile‐Time and Run‐Time Parallelization
-    year: 1999
+    title: "Combining Compile\u2010Time and Run\u2010Time Parallelization"
+    year: '1999'
+  PuD26bsAAAAJ:d1gkVwhDpl0C:
+    citations: 40
+    title: Predicated array data-flow analysis for run-time parallelization
+    year: '1998'
+  PuD26bsAAAAJ:eQOLeE2rZwMC:
+    citations: 0
+    title: Method and apparatus for automatic machine-specific function versioning
+    year: '2003'
+  PuD26bsAAAAJ:jL-93Qbq4QoC:
+    citations: 7
+    title: Apparatus and method for providing visual interface for information of error generated in multithread testing
+    year: '2011'
+  PuD26bsAAAAJ:qjMakFHDy7sC:
+    citations: 24
+    title: Measuring the effectiveness of automatic parallelization in SUIF
+    year: '1998'
+  PuD26bsAAAAJ:roLk4NBRz8UC:
+    citations: 17
+    title: Apparatus and method for controlling parallel programming
+    year: '2011'
+  PuD26bsAAAAJ:u-x6o8ySG0sC:
+    citations: 51
+    title: Evaluation of predicated array data-flow analysis for automatic parallelization
+    year: '1999'
+  PuD26bsAAAAJ:u5HHmVD_uO8C:
+    citations: 100
+    title: A tile selection algorithm for data locality and cache interference
+    year: '1999'
+  PuD26bsAAAAJ:uDGL6kOW6j0C:
+    citations: 13
+    title: Apparatus and method for executing an application
+    year: '2014'
+  PuD26bsAAAAJ:ufrVoPGSRksC:
+    citations: 6
+    title: Data layout using data type information
+    year: '2015'
+  PuD26bsAAAAJ:zYLM7Y9cAGgC:
+    citations: 10
+    title: 'Adaptive granularity: Transparent integration of fine-and coarse-grain communication'
+    year: '1997'
