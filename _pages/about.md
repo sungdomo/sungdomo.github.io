@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 Advisor @ MX (Mobile eXperience), [Samsung Electronics](https://samsung.com/)<BR>
-Adjunct Professor @ [ITCEC, Dongguk University](https://itcec.dongguk.edu/)<BR>
+Adjunct Professor @ [SEI, Dongguk University](https://sw.dongguk.edu/)<BR>
 <BR>
 Corporate EVP @ System R&D Team, MX, [Samsung Electronics](https://samsung.com/)<BR>
 SW Engineer @ Java, Compilers & Tools Lab, [Hewlett-Packard Company](https://hpe.com/)<BR>
