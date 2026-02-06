@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-07'
+  last_updated: '2026-02-06'
 papers:
   PuD26bsAAAAJ:2osOgNQ5qMEC:
     citations: 22
@@ -94,7 +94,7 @@ papers:
     title: Apparatus and method for controlling parallel programming
     year: '2011'
   PuD26bsAAAAJ:u-x6o8ySG0sC:
-    citations: 51
+    citations: 52
     title: Evaluation of predicated array data-flow analysis for automatic parallelization
     year: '1999'
   PuD26bsAAAAJ:u5HHmVD_uO8C:
