@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-02-06'
+  last_updated: '2026-02-23'
 papers:
   PuD26bsAAAAJ:2osOgNQ5qMEC:
-    citations: 22
+    citations: 21
     title: Evaluating automatic parallelization in SUIF
     year: '2000'
   PuD26bsAAAAJ:2tRrZ1ZAMYUC:
@@ -46,11 +46,11 @@ papers:
     title: Method of analyzing single thread access of variable in multi-threaded program
     year: '2013'
   PuD26bsAAAAJ:Se3iqnhoufwC:
-    citations: 7
+    citations: 0
     title: Apparatus and method for detecting false sharing
     year: '2014'
   PuD26bsAAAAJ:Tyk-4Ss8FVUC:
-    citations: 11
+    citations: 10
     title: A case for combining compile-time and run-time parallelization
     year: '1998'
   PuD26bsAAAAJ:ULOm3_A8WrAC:
@@ -58,7 +58,7 @@ papers:
     title: Apparatus and method for detecting data race
     year: '2012'
   PuD26bsAAAAJ:UeHWp8X0CEIC:
-    citations: 25
+    citations: 22
     title: SYZYGY-a framework for scalable cross-module IPO
     year: '2004'
   PuD26bsAAAAJ:W7OEmFMy1HYC:
@@ -74,7 +74,7 @@ papers:
     title: "Combining Compile\u2010Time and Run\u2010Time Parallelization"
     year: '1999'
   PuD26bsAAAAJ:d1gkVwhDpl0C:
-    citations: 40
+    citations: 42
     title: Predicated array data-flow analysis for run-time parallelization
     year: '1998'
   PuD26bsAAAAJ:eQOLeE2rZwMC:
@@ -86,7 +86,7 @@ papers:
     title: Apparatus and method for providing visual interface for information of error generated in multithread testing
     year: '2011'
   PuD26bsAAAAJ:qjMakFHDy7sC:
-    citations: 24
+    citations: 23
     title: Measuring the effectiveness of automatic parallelization in SUIF
     year: '1998'
   PuD26bsAAAAJ:roLk4NBRz8UC:
@@ -94,11 +94,11 @@ papers:
     title: Apparatus and method for controlling parallel programming
     year: '2011'
   PuD26bsAAAAJ:u-x6o8ySG0sC:
-    citations: 52
+    citations: 47
     title: Evaluation of predicated array data-flow analysis for automatic parallelization
     year: '1999'
   PuD26bsAAAAJ:u5HHmVD_uO8C:
-    citations: 100
+    citations: 95
     title: A tile selection algorithm for data locality and cache interference
     year: '1999'
   PuD26bsAAAAJ:uDGL6kOW6j0C:
@@ -109,6 +109,10 @@ papers:
     citations: 6
     title: Data layout using data type information
     year: '2015'
+  PuD26bsAAAAJ:wMgC3FpKEyYC:
+    citations: 1
+    title: Predicated Array Data-Flow Analysis for Runtime Parallelization
+    year: '1988'
   PuD26bsAAAAJ:zYLM7Y9cAGgC:
     citations: 10
     title: 'Adaptive granularity: Transparent integration of fine-and coarse-grain communication'
