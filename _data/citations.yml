@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-08'
+  last_updated: '2026-06-17'
 papers:
   PuD26bsAAAAJ:2osOgNQ5qMEC:
     citations: 22
@@ -58,7 +58,7 @@ papers:
     title: Apparatus and method for detecting data race
     year: '2012'
   PuD26bsAAAAJ:UeHWp8X0CEIC:
-    citations: 22
+    citations: 23
     title: SYZYGY-a framework for scalable cross-module IPO
     year: '2004'
   PuD26bsAAAAJ:W7OEmFMy1HYC:
@@ -94,7 +94,7 @@ papers:
     title: Apparatus and method for controlling parallel programming
     year: '2011'
   PuD26bsAAAAJ:u-x6o8ySG0sC:
-    citations: 48
+    citations: 49
     title: Evaluation of predicated array data-flow analysis for automatic parallelization
     year: '1999'
   PuD26bsAAAAJ:u5HHmVD_uO8C:
