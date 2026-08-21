@@ -10,7 +10,7 @@ acm_id: 81452618581 # your dl.acm.org/profile/id
 # blogger_url: # your blogger URL
 bluesky_url: https://bsky.app/profile/sungdomo.bsky.social # your bluesky URL
 # cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-# dblp_url: # your DBLP profile url
+dblp_url: https://dblp.org/pid/93/6400 # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
 email: sungdo.moon@gmail.com # your email address
 facebook_id: sungdo.moon # your facebook id
@@ -34,24 +34,24 @@ orcid_id: 0009-0004-3662-906X # your ORCID ID
 # pinterest_id: # your pinterest id
 # publons_id: # your ID on Publons
 # quora_username: # your Quora username
-# research_gate_profile: # your profile on ResearchGate
+research_gate_profile: Sungdo-Moon-2 # your profile on ResearchGate
 # rss_icon: true # comment this line to hide the RSS icon
 scholar_userid: PuD26bsAAAAJ # your Google Scholar ID
-# scopus_id: # your profile on Scopus
-# semanticscholar_id: # your Semantic Scholar ID
+scopus_id: 7401616802 # your profile on Scopus
+semanticscholar_id: Sungdo-Moon/1807451 # your Semantic Scholar ID
 # spotify_id: # your spotify id
 # stackoverflow_id: # your stackoverflow id
 # strava_userid: # your strava user id
-# telegram_username: # your Telegram user name
+telegram_username: sungdomo # your Telegram user name
 # unsplash_id: # your unsplash id
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
-# whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
+# whatsapp_number: +82 1043200580 # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
 # work_url: # work page URL
 x_username: sungdomo # your X handle
-# youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
-# zotero_username: # your zotero username
+# youtube_id: SungdoMoon # your youtube channel id (youtube.com/@<youtube_id>)
+zotero_username: sungdomo # your zotero username
 # custom_social: # can be any name here other than the ones already defined above
 #  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
 #  title: Custom Social

@@ -1,189 +1,196 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Sungdo Moon
+#  label: ""
+  email: sungdo.moon@gmail.com
+  location: ""
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+#  summary: "Software engineer"
 
   social_networks:
     - network: X
-      username: AlbertEinstein
+      username: sungdomo
     - network: GitHub
-      username: example
+      username: sungdomo
     - network: LinkedIn
-      username: example
+      username: sungdomoon
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    street: Jeongja-dong, Bundang-gu
+    city: Seoungnam-si
+    region: Gyeonggi-do
+    postalCode: ""
+    countryCode: KR
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
+      - institution: University of Southern California
+        location: Los Angeles, CA, USA
+        url: https://cs.usc.edu/
+        area: Computer Science
         studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+        start_date: 1994-09
+        end_date: 2000-10
         highlights:
-          - Description 1.
-          - Description 2.
+          - Dissertation - Combining Compile-time and Run-time Parallelization
+          - Advisor - Mary W. Hall
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: University of Southern California
+        location: Los Angeles, CA, USA
+        url: https://cs.usc.edu/
+        area: Computer Science
+        studyType: MS
+        start_date: 1991-09
+        end_date: 1993-05
+
+      - institution: Seoul National University
+        location: Seoul, Korea
+        url: https://snu.ac.kr/
+        area: Physics with Computer Engineering minor
+        studyType: BS
+        start_date: 1987-03
+        end_date: 1991-02
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: Samsung Electronics
+        position: Advisor
+        location: Suwon, Korea
+        start_date: 2024-12
+        end_date: 2026-11
+        summary: MX Business Unit
+
+      - company: Samsung Electronics
+        position: Corporate EVP
+        location: Suwon, Korea
+        start_date: 2021-12
+        end_date: 2024-11
+        summary: MX Business Unit, System R&D Team Lead
         highlights:
-          - Relativity
-          - Description 2.
+          - On-device AI
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Samsung Electronics
+        position: Corporate SVP
+        location: Suwon, Korea
+        start_date: 2020-12
+        end_date: 2021-11
+        summary: MX Business Unit, System S/W R&D Team & CP R&D Team Lead
         highlights:
-          - Description 1.
-          - Description 2.
+          - Android system
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Samsung Electronics
+        position: Corporate VP
+        location: Suwon, Korea
+        start_date: 2012-12
+        end_date: 2020-11
+        summary: MX Business Unit, System Core / System Platform Group Lead
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Android system
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - company: Samsung Electronics
+        position: Principal Engineer
+        location: Suwon, Korea
+        start_date: 2010-12
+        end_date: 2012-11
+        summary: Android BSP T/F Lead
+        highlights:
+          - System SW T/F Lead for S.LSI AP based Galaxy III, IV & Note 
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: Samsung Electronics
+        position: Principal Engineer
+        location: Suwon, Korea
+        start_date: 2007-08
+        end_date: 2010-11
+        summary: SW Center / DM Research / SAIT
+        highlights:
+          - Virtualization / Multi-core tools
+
+      - company: Hewlett-Packard Company
+        position: SW Engineer
+        location: Cupertino, CA, USA
+        start_date: 2000-10
+        end_date: 2007-07
+        summary: Java, Compilers, and Tools Lab
+        highlights:
+          - HP/UX Itanium compilers
+
+#    Volunteer:
+#      - company: People's Climate March
+#        position: Lead Organizer
+#        location: Zurich, Switzerland
+#        start_date: 2014-04-01
+#        end_date: 2015-07-01
+#        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+#        highlights:
+#          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
+#          - "Men of the year 2014 by Time magazine"
+
+#    Awards:
+#      - title: Nobel Prize in Physics
+#        authors:
+#          - "Royal Swedish Academy of Sciences"
+#        date: 1921-11-01
+#        awarder: Royal Swedish Academy of Sciences
+#        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
+#        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'##
+
+#      - title: Max Planck Medal
+#        authors:
+#          - "German Physical Society"
+#        date: 2029
+#        awarder: German Physical Society
+#        summary: Awarded for outstanding scientific achievement
 
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - name: Google Scholar
+        url: https://scholar.google.com/citations?user=PuD26bsAAAAJ
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+#   Skills:
+#      - name: Physics
+#        level: Master
+#        icon: fa-solid fa-hashtag
+#        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Languages:
-      - name: German
+      - name: Korean
         summary: "Native speaker"
 
       - name: English
         summary: "Fluent"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+#    Interests:
+#      - name: Physics
+#        icon: fa-solid fa-tag
+#        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+#   Certificates:
+#      - name: Machine Learning
+#        date: 2018-01-01
+#        issuer: Stanford University
+#        icon: fa-solid fa-location-dot
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+#      - name: Quantum Computing
+#        date: 2018-01-01
+#        issuer: Stanford University
+#        icon: fa-solid fa-tag
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+#      - name: Quantum Information
+#        date: 2018-01-01
+#        issuer: Stanford University
+#        icon: fa-solid fa-envelope
 
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+#   Projects:
+#      - name: Quantum Computing
+#        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+#        highlights:
+#          - Quantum Teleportation
+#          - Quantum Cryptography
+#        start_date: 2018-01-01
+#        end_date: 2018-01-01
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+#   References:
+#      - name: Professor John Doe
+#        icon: fa-solid fa-laptop
+#        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+#      - name: Professor Jane Smith
+#        icon: fa-solid fa-thumbtack
+#        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
