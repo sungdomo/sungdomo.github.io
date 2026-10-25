@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://sungdomo.github.io/sitemap.xml
+Sitemap: https://sungdomo.github.io/sitemap-index.xml
