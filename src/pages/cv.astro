@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import {
+  profile,
+  experienceItems,
+  educationItems,
+  socialLinks,
+} from '../data/siteData';
+---
+
+<BaseLayout
+  title={`Curriculum Vitae — ${profile.name}`}
+  description={`Curriculum Vitae of ${profile.name}: Advisor at Samsung Electronics MX, Adjunct Professor at Dongguk University, former Corporate EVP at Samsung Electronics, and USC Computer Science PhD.`}
+  currentPath="/cv/"
+>
+  <header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+    <div>
+      <h1 class="page-title">{profile.name}</h1>
+      <p class="page-subtitle" style="margin-block-end: 0.75rem;">
+        {profile.headline}
+      </p>
+      <div style="font-size: 0.9rem; color: var(--text-secondary);">
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
+        &nbsp;&middot;&nbsp;
+        <span>{profile.location}</span>
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="social-pill no-print"
+      id="print-cv-btn"
+      style="cursor: pointer;"
+    >
+      <Icon name="print" size={15} />
+      <span>Print / Save PDF</span>
+    </button>
+  </header>
+
+  <!-- Professional Experience -->
+  <section class="section-block" aria-labelledby="cv-experience">
+    <div class="section-header">
+      <h2 id="cv-experience" class="section-title">Experience</h2>
+    </div>
+    <ul class="timeline-list">
+      {experienceItems.map((exp) => (
+        <li class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="timeline-role">{exp.position}</span>
+              {' · '}
+              {exp.companyUrl ? (
+                <a href={exp.companyUrl} class="timeline-org" target="_blank" rel="noopener noreferrer">
+                  {exp.company}
+                </a>
+              ) : (
+                <span class="timeline-org">{exp.company}</span>
+              )}
+            </div>
+            <span class="timeline-period">{exp.period}</span>
+          </div>
+          <div class="timeline-meta">{exp.department} · {exp.location}</div>
+          {exp.highlights && exp.highlights.length > 0 && (
+            <ul class="timeline-highlights">
+              {exp.highlights.map((h) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Education -->
+  <section class="section-block" aria-labelledby="cv-education">
+    <div class="section-header">
+      <h2 id="cv-education" class="section-title">Education</h2>
+    </div>
+    <ul class="timeline-list">
+      {educationItems.map((edu) => (
+        <li class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="timeline-role">{edu.degree}</span>
+              {' · '}
+              <a href={edu.institutionUrl} class="timeline-org" target="_blank" rel="noopener noreferrer">
+                {edu.institution}
+              </a>
+            </div>
+            <span class="timeline-period">{edu.period}</span>
+          </div>
+          <div class="timeline-meta">{edu.area} · {edu.location}</div>
+          {edu.dissertation && (
+            <ul class="timeline-highlights">
+              <li>
+                Dissertation:{' '}
+                {edu.dissertationUrl ? (
+                  <a href={edu.dissertationUrl} target="_blank" rel="noopener noreferrer">
+                    <em>{edu.dissertation}</em>
+                  </a>
+                ) : (
+                  <em>{edu.dissertation}</em>
+                )}
+              </li>
+              {edu.advisor && <li>Advisor: {edu.advisor}</li>}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Areas of Expertise -->
+  <section class="section-block" aria-labelledby="cv-expertise">
+    <div class="section-header">
+      <h2 id="cv-expertise" class="section-title">Areas of Expertise</h2>
+    </div>
+    <ul class="chip-list">
+      {profile.expertise.map((skill) => (
+        <li class="chip">{skill}</li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Languages -->
+  <section class="section-block" aria-labelledby="cv-languages">
+    <div class="section-header">
+      <h2 id="cv-languages" class="section-title">Languages</h2>
+    </div>
+    <ul class="chip-list">
+      {profile.languages.map((lang) => (
+        <li class="chip">
+          <strong>{lang.language}</strong> — {lang.fluency}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Publications & Academic Identifiers -->
+  <section class="section-block" aria-labelledby="cv-links">
+    <div class="section-header">
+      <h2 id="cv-links" class="section-title">Publications &amp; Academic Profiles</h2>
+      <a href="/publications/" class="section-link no-print">
+        <span>Full Bibliography</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <div class="social-pills">
+      {socialLinks.map((link) => (
+        <a
+          href={link.url}
+          class="social-pill"
+          target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+          rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+        >
+          <Icon name={link.icon} size={14} />
+          <span>{link.label}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('print-cv-btn')?.addEventListener('click', () => {
+      window.print();
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,120 @@
+---
+import type { Publication } from '../data/siteData';
+import Icon from './Icon.astro';
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+const primaryLink = pub.url || (pub.doi ? `https://doi.org/${pub.doi}` : undefined);
+const scholarUrl = pub.scholarId
+  ? `https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PuD26bsAAAAJ&citation_for_view=PuD26bsAAAAJ:${pub.scholarId}`
+  : undefined;
+---
+
+<article class="pub-card" id={pub.id}>
+  <div class="pub-header">
+    <h3 class="pub-title">
+      {primaryLink ? (
+        <a href={primaryLink} target="_blank" rel="noopener noreferrer">
+          {pub.title}
+        </a>
+      ) : (
+        pub.title
+      )}
+    </h3>
+    <span class="pub-badge" title={pub.venue}>{pub.abbr} ’{String(pub.year).slice(-2)}</span>
+  </div>
+
+  <p class="pub-authors">
+    {pub.authors.map((author, idx) => (
+      <>
+        {author === 'Sungdo Moon' ? (
+          <span class="pub-author-self">{author}</span>
+        ) : (
+          <span>{author}</span>
+        )}
+        {idx < pub.authors.length - 1 ? ', ' : ''}
+      </>
+    ))}
+  </p>
+
+  <div class="pub-venue">
+    {pub.venue}
+    {pub.volume ? `, Vol. ${pub.volume}` : ''}
+    {pub.number ? `(${pub.number})` : ''}
+    {pub.pages ? `, pp. ${pub.pages}` : ''}
+    {pub.month ? `, ${pub.month} ${pub.year}` : `, ${pub.year}`}
+  </div>
+
+  <div class="pub-actions no-print">
+    {primaryLink && (
+      <a class="pub-btn" href={primaryLink} target="_blank" rel="noopener noreferrer">
+        <span>Paper / DOI</span>
+        <Icon name="external" size={13} />
+      </a>
+    )}
+    {scholarUrl && (
+      <a class="pub-btn" href={scholarUrl} target="_blank" rel="noopener noreferrer">
+        <Icon name="scholar" size={13} />
+        <span>Google Scholar</span>
+      </a>
+    )}
+    <button
+      type="button"
+      class="pub-btn pub-toggle-btn"
+      aria-expanded="false"
+      aria-controls={`abstract-${pub.id}`}
+    >
+      <span>Abstract</span>
+    </button>
+    <button
+      type="button"
+      class="pub-btn pub-toggle-btn"
+      aria-expanded="false"
+      aria-controls={`bibtex-${pub.id}`}
+    >
+      <span>BibTeX</span>
+    </button>
+  </div>
+
+  <div id={`abstract-${pub.id}`} class="pub-panel no-print" hidden="until-found">
+    <div class="pub-abstract-box">
+      {pub.abstract}
+    </div>
+  </div>
+
+  <div id={`bibtex-${pub.id}`} class="pub-panel no-print" hidden="until-found">
+    <pre><code>{pub.bibtex}</code></pre>
+  </div>
+</article>
+
+<script>
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement | null;
+    const btn = target?.closest<HTMLButtonElement>('.pub-toggle-btn');
+    if (!btn) return;
+
+    const panelId = btn.getAttribute('aria-controls');
+    if (!panelId) return;
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    if (isExpanded) {
+      panel.setAttribute('hidden', 'until-found');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      panel.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  document.addEventListener('beforematch', (event) => {
+    const panel = (event.target as HTMLElement | null)?.closest<HTMLElement>('.pub-panel');
+    if (!panel || !panel.id) return;
+    const btn = document.querySelector<HTMLButtonElement>(`.pub-toggle-btn[aria-controls="${panel.id}"]`);
+    btn?.setAttribute('aria-expanded', 'true');
+  });
+</script>

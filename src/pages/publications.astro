@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import Icon from '../components/Icon.astro';
+import { profile, publications } from '../data/siteData';
+
+const years = Array.from(new Set(publications.map((p) => p.year))).sort((a, b) => b - a);
+---
+
+<BaseLayout
+  title={`Publications — ${profile.name}`}
+  description={`Academic publications, conference papers, journal articles, and dissertation by ${profile.name} in compilers, parallelization, and computer systems.`}
+  currentPath="/publications/"
+>
+  <header>
+    <h1 class="page-title">Publications</h1>
+    <p class="page-subtitle">
+      Peer-reviewed conference papers, journal articles, technical reports, and doctoral dissertation in optimizing &amp; parallelizing compilers, interprocedural optimization, and multicore systems.
+    </p>
+    <div class="social-pills" style="margin-block: 0 2.25rem;">
+      <a
+        href="https://scholar.google.com/citations?user=PuD26bsAAAAJ"
+        class="social-pill"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="scholar" size={15} />
+        <span>Google Scholar Profile</span>
+        <Icon name="external" size={13} />
+      </a>
+      <a
+        href="https://dblp.org/pid/93/6400"
+        class="social-pill"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>DBLP Bibliography</span>
+        <Icon name="external" size={13} />
+      </a>
+      <a
+        href="https://dl.acm.org/profile/81452618581"
+        class="social-pill"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>ACM Digital Library</span>
+        <Icon name="external" size={13} />
+      </a>
+      <a
+        href="https://ieeexplore.ieee.org/author/38061184600"
+        class="social-pill"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>IEEE Xplore</span>
+        <Icon name="external" size={13} />
+      </a>
+    </div>
+  </header>
+
+  {years.map((year) => {
+    const pubsInYear = publications.filter((p) => p.year === year);
+    return (
+      <section class="pub-year-group" aria-labelledby={`year-${year}`}>
+        <h2 id={`year-${year}`} class="pub-year-heading">{year}</h2>
+        <div class="pub-list">
+          {pubsInYear.map((pub) => (
+            <PublicationCard pub={pub} />
+          ))}
+        </div>
+      </section>
+    );
+  })}
+</BaseLayout>

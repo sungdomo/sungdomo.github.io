@@ -1,0 +1,157 @@
+---
+import '../styles/global.css';
+import { profile } from '../data/siteData';
+import Icon from '../components/Icon.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  currentPath?: string;
+}
+
+const {
+  title = `${profile.name} — ${profile.headline}`,
+  description = profile.tagline,
+  currentPath = Astro.url.pathname,
+} = Astro.props;
+
+const normalizedPath = currentPath.endsWith('/') && currentPath !== '/'
+  ? currentPath
+  : currentPath === '/'
+    ? '/'
+    : `${currentPath}/`;
+
+const navItems = [
+  { href: '/', label: 'About' },
+  { href: '/publications/', label: 'Publications' },
+  { href: '/cv/', label: 'CV' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Declare support for both light and dark themes -->
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      try {
+        document.querySelector('meta[name="color-scheme"]').content =
+          localStorage.getItem("color-scheme") ?? "light dark";
+      } catch {}
+    </script>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <!-- Block rendering until #main-content is parsed for consistent cross-document view transitions -->
+    <link rel="expect" href="#main-content" blocking="render" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="brand-link">
+          <span>{profile.name}</span>
+        </a>
+        <div class="nav-controls">
+          <nav aria-label="Primary">
+            <ul class="nav-links">
+              {navItems.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    class="nav-link"
+                    aria-current={normalizedPath === item.href ? 'page' : undefined}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <button type="button" class="theme-toggle" id="theme-toggle" title="Toggle color scheme">
+            <span class="option-dark">
+              <Icon name="moon" size={16} />
+              <span class="sr-only">Switch to dark theme</span>
+            </span>
+            <span class="option-light">
+              <Icon name="sun" size={16} />
+              <span class="sr-only">Switch to light theme</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          &copy; {new Date().getFullYear()} {profile.name}. All rights reserved.
+        </div>
+        <div>
+          <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://github.com/sungdomo" target="_blank" rel="noopener noreferrer">GitHub</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://www.linkedin.com/in/sungdomoon" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://scholar.google.com/citations?user=PuD26bsAAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const meta = document.querySelector<HTMLMetaElement>('meta[name="color-scheme"]');
+      const toggleBtn = document.getElementById('theme-toggle');
+      const systemDarkMql = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function getSystemScheme(): 'light' | 'dark' {
+        return systemDarkMql.matches ? 'dark' : 'light';
+      }
+
+      function getStoredScheme(): 'light' | 'dark' | null {
+        try {
+          const val = localStorage.getItem('color-scheme');
+          return val === 'light' || val === 'dark' ? val : null;
+        } catch {
+          return null;
+        }
+      }
+
+      function applySchemeToMeta(scheme: string | null) {
+        if (!meta) return;
+        meta.content = scheme === 'light' || scheme === 'dark' ? scheme : 'light dark';
+      }
+
+      toggleBtn?.addEventListener('click', () => {
+        const stored = getStoredScheme();
+        const systemScheme = getSystemScheme();
+        const currentRendered = stored ?? systemScheme;
+        const target: 'light' | 'dark' = currentRendered === 'dark' ? 'light' : 'dark';
+
+        if (target !== systemScheme) {
+          try {
+            localStorage.setItem('color-scheme', target);
+          } catch {}
+          applySchemeToMeta(target);
+        } else {
+          try {
+            localStorage.removeItem('color-scheme');
+          } catch {}
+          applySchemeToMeta(null);
+        }
+      });
+
+      window.addEventListener('storage', (event) => {
+        if (event.key === 'color-scheme') {
+          applySchemeToMeta(event.newValue);
+        }
+      });
+    </script>
+  </body>
+</html>

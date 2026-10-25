@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import {
+  profile,
+  newsItems,
+  experienceItems,
+  educationItems,
+  publications,
+  socialLinks,
+} from '../data/siteData';
+
+const primarySocials = socialLinks.filter((s) => s.category === 'primary' || s.label === 'ORCID');
+const academicSocials = socialLinks.filter((s) => s.category === 'academic' || s.category === 'social');
+const selectedPubs = publications.filter((p) => p.selected);
+const featuredExperience = experienceItems.slice(0, 4);
+---
+
+<BaseLayout
+  title={`${profile.name} — Advisor at Samsung Electronics & Adjunct Professor at Dongguk University`}
+  description={profile.tagline}
+  currentPath="/"
+>
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-content">
+      <h1 id="hero-heading" class="hero-name">{profile.name}</h1>
+      <p class="hero-tagline">{profile.tagline}</p>
+
+      <ul class="affiliation-list" aria-label="Current roles">
+        {profile.currentAffiliations.map((aff) => (
+          <li class="affiliation-item">
+            <span class="role-badge">{aff.role}</span>
+            <span>
+              {aff.departmentUrl ? (
+                <a href={aff.departmentUrl} target="_blank" rel="noopener noreferrer">{aff.department}</a>
+              ) : (
+                aff.department
+              )}
+              {', '}
+              <a href={aff.organizationUrl} target="_blank" rel="noopener noreferrer">
+                {aff.organization}
+              </a>
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <ul class="affiliation-list" aria-label="Previous roles and education">
+        {profile.previousHighlights.map((item) => (
+          <li class="affiliation-item">
+            <span class="role-badge past">{item.role}</span>
+            <span>
+              {item.departmentUrl ? (
+                <a href={item.departmentUrl} target="_blank" rel="noopener noreferrer">{item.department}</a>
+              ) : (
+                item.department
+              )}
+              {', '}
+              <a href={item.organizationUrl} target="_blank" rel="noopener noreferrer">
+                {item.organization}
+              </a>
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <div class="social-pills" aria-label="Primary contact and profile links">
+        {primarySocials.map((link) => (
+          <a
+            href={link.url}
+            class="social-pill"
+            target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+            rel={link.url.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+          >
+            <Icon name={link.icon} size={15} />
+            <span>{link.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="hero-avatar-wrap">
+      <img
+        src={profile.avatar}
+        alt={`Portrait of ${profile.name}`}
+        class="hero-avatar"
+        width="168"
+        height="168"
+        fetchpriority="high"
+      />
+    </div>
+  </section>
+
+  <!-- Recent News -->
+  <section class="section-block" aria-labelledby="news-heading">
+    <div class="section-header">
+      <h2 id="news-heading" class="section-title">News &amp; Updates</h2>
+    </div>
+    <ul class="news-list">
+      {newsItems.map((item) => (
+        <li class="news-item">
+          <time class="news-date" datetime={item.date}>{item.displayDate}</time>
+          <span>{item.text}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Career Highlights -->
+  <section class="section-block" aria-labelledby="career-heading">
+    <div class="section-header">
+      <h2 id="career-heading" class="section-title">Experience Highlights</h2>
+      <a href="/cv/" class="section-link">
+        <span>Full CV &amp; Timeline</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <ul class="timeline-list">
+      {featuredExperience.map((exp) => (
+        <li class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="timeline-role">{exp.position}</span>
+              {' · '}
+              {exp.companyUrl ? (
+                <a href={exp.companyUrl} class="timeline-org" target="_blank" rel="noopener noreferrer">
+                  {exp.company}
+                </a>
+              ) : (
+                <span class="timeline-org">{exp.company}</span>
+              )}
+            </div>
+            <span class="timeline-period">{exp.period}</span>
+          </div>
+          <div class="timeline-meta">{exp.department} · {exp.location}</div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Education Summary -->
+  <section class="section-block" aria-labelledby="education-heading">
+    <div class="section-header">
+      <h2 id="education-heading" class="section-title">Education</h2>
+    </div>
+    <ul class="timeline-list">
+      {educationItems.map((edu) => (
+        <li class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <span class="timeline-role">{edu.degree}</span>
+              {' · '}
+              <a href={edu.institutionUrl} class="timeline-org" target="_blank" rel="noopener noreferrer">
+                {edu.institution}
+              </a>
+            </div>
+            <span class="timeline-period">{edu.period}</span>
+          </div>
+          <div class="timeline-meta">{edu.area} · {edu.location}</div>
+          {edu.dissertation && (
+            <div class="timeline-meta">
+              Dissertation:{' '}
+              {edu.dissertationUrl ? (
+                <a href={edu.dissertationUrl} target="_blank" rel="noopener noreferrer">
+                  <em>{edu.dissertation}</em>
+                </a>
+              ) : (
+                <em>{edu.dissertation}</em>
+              )}
+              {edu.advisor ? ` (Advisor: ${edu.advisor})` : ''}
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- Selected Publications -->
+  <section class="section-block" aria-labelledby="selected-pubs-heading">
+    <div class="section-header">
+      <h2 id="selected-pubs-heading" class="section-title">Selected Publications</h2>
+      <a href="/publications/" class="section-link">
+        <span>View all {publications.length} publications</span>
+        <span aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+    <div class="pub-list">
+      {selectedPubs.map((pub) => (
+        <PublicationCard pub={pub} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Academic & Social Profiles -->
+  <section class="section-block" aria-labelledby="profiles-heading">
+    <div class="section-header">
+      <h2 id="profiles-heading" class="section-title">Academic &amp; Social Profiles</h2>
+    </div>
+    <div class="social-pills">
+      {academicSocials.map((link) => (
+        <a
+          href={link.url}
+          class="social-pill"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name={link.icon} size={14} />
+          <span>{link.label}</span>
+          <Icon name="external" size={12} />
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
