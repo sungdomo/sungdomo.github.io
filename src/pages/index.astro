@@ -48,22 +48,25 @@ const featuredExperience = experienceItems.slice(0, 4);
       </ul>
 
       <ul class="affiliation-list" aria-label="Previous roles and education">
-        {profile.previousHighlights.map((item) => (
-          <li class="affiliation-item">
-            <span class="role-badge past">{item.role}</span>
-            <span>
-              {item.departmentUrl ? (
-                <a href={item.departmentUrl} target="_blank" rel="noopener noreferrer">{item.department}</a>
-              ) : (
-                item.department
-              )}
-              {', '}
-              <a href={item.organizationUrl} target="_blank" rel="noopener noreferrer">
-                {item.organization}
-              </a>
-            </span>
-          </li>
-        ))}
+        {profile.previousHighlights.map((item) => {
+          const isEdu = item.role.includes('PhD') || item.role.includes('BS');
+          return (
+            <li class="affiliation-item">
+              <span class={`role-badge ${isEdu ? 'edu' : 'past'}`}>{item.role}</span>
+              <span>
+                {item.departmentUrl ? (
+                  <a href={item.departmentUrl} target="_blank" rel="noopener noreferrer">{item.department}</a>
+                ) : (
+                  item.department
+                )}
+                {', '}
+                <a href={item.organizationUrl} target="_blank" rel="noopener noreferrer">
+                  {item.organization}
+                </a>
+              </span>
+            </li>
+          );
+        })}
       </ul>
 
       <div class="social-pills" aria-label="Primary contact and profile links">
@@ -94,7 +97,7 @@ const featuredExperience = experienceItems.slice(0, 4);
   </section>
 
   <!-- Recent News -->
-  <section class="section-block" aria-labelledby="news-heading">
+  <section class="section-block accent-amber" aria-labelledby="news-heading">
     <div class="section-header">
       <h2 id="news-heading" class="section-title">News &amp; Updates</h2>
     </div>
@@ -109,7 +112,7 @@ const featuredExperience = experienceItems.slice(0, 4);
   </section>
 
   <!-- Career Highlights -->
-  <section class="section-block" aria-labelledby="career-heading">
+  <section class="section-block accent-indigo" aria-labelledby="career-heading">
     <div class="section-header">
       <h2 id="career-heading" class="section-title">Experience Highlights</h2>
       <a href="/cv/" class="section-link">
@@ -141,13 +144,13 @@ const featuredExperience = experienceItems.slice(0, 4);
   </section>
 
   <!-- Education Summary -->
-  <section class="section-block" aria-labelledby="education-heading">
+  <section class="section-block accent-teal" aria-labelledby="education-heading">
     <div class="section-header">
       <h2 id="education-heading" class="section-title">Education</h2>
     </div>
     <ul class="timeline-list">
       {educationItems.map((edu) => (
-        <li class="timeline-card">
+        <li class="timeline-card edu-card">
           <div class="timeline-top">
             <div>
               <span class="timeline-role">{edu.degree}</span>
@@ -178,7 +181,7 @@ const featuredExperience = experienceItems.slice(0, 4);
   </section>
 
   <!-- Selected Publications -->
-  <section class="section-block" aria-labelledby="selected-pubs-heading">
+  <section class="section-block accent-indigo" aria-labelledby="selected-pubs-heading">
     <div class="section-header">
       <h2 id="selected-pubs-heading" class="section-title">Selected Publications</h2>
       <a href="/publications/" class="section-link">
@@ -194,7 +197,7 @@ const featuredExperience = experienceItems.slice(0, 4);
   </section>
 
   <!-- Academic & Social Profiles -->
-  <section class="section-block" aria-labelledby="profiles-heading">
+  <section class="section-block accent-rose" aria-labelledby="profiles-heading">
     <div class="section-header">
       <h2 id="profiles-heading" class="section-title">Academic &amp; Social Profiles</h2>
     </div>

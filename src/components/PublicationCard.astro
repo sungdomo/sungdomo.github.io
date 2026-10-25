@@ -13,7 +13,7 @@ const scholarUrl = pub.scholarId
   : undefined;
 ---
 
-<article class="pub-card" id={pub.id}>
+<article class="pub-card" id={pub.id} data-pub-type={pub.type}>
   <div class="pub-header">
     <h3 class="pub-title">
       {primaryLink ? (
