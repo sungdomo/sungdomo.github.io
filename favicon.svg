@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="16" fill="#0f172a"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="26" letter-spacing="-1">SM</text>
+  <rect width="64" height="64" rx="16" fill="#202124"/>
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H16V5H0V10Z" fill="#4285f4"/>
+  <rect x="16" y="0" width="16" height="5" fill="#ea4335"/>
+  <rect x="32" y="0" width="16" height="5" fill="#fbbc04"/>
+  <path d="M48 0H54C59.5228 0 64 4.47715 64 10V5H48V0Z" fill="#34a853"/>
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#e8eaed" font-family="'Google Sans', 'Roboto', system-ui, -apple-system, sans-serif" font-weight="700" font-size="26" letter-spacing="-1">SM</text>
 </svg>
