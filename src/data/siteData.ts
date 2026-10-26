@@ -37,6 +37,7 @@ export interface EducationItem {
   dissertation?: string;
   dissertationUrl?: string;
   advisor?: string;
+  advisorUrl?: string;
 }
 
 export interface Publication {
@@ -74,6 +75,8 @@ export const profile = {
   headline: 'Advisor at Samsung Electronics MX & Adjunct Professor at Dongguk University',
   tagline:
     'Technology executive, researcher, and educator specializing in On-Device AI, Android Systems, Mobile Platform Architecture, and Optimizing & Parallelizing Compilers.',
+  bio:
+    'With over 25 years across industry and academia, I led Android system software, platform engineering, and On-Device AI architecture for global Galaxy flagships as Corporate EVP and Head of the System R&D Team at Samsung Electronics MX. Earlier in my career, I architected the SYZYGY scalable cross-module interprocedural optimization (IPO) framework for HP-UX Itanium compilers at Hewlett-Packard after earning my PhD in Computer Science from USC.',
   email: 'sungdo.moon@gmail.com',
   location: 'Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea',
   avatar: '/images/prof_pic.png',
@@ -259,6 +262,7 @@ export const educationItems: EducationItem[] = [
     dissertation: 'Combining Compile-Time and Run-Time Parallelization',
     dissertationUrl: 'https://doi.org/10.25549/usctheses-c16-224653',
     advisor: 'Mary W. Hall',
+    advisorUrl: 'https://users.cs.utah.edu/~mhall/',
   },
   {
     institution: 'University of Southern California',
@@ -301,7 +305,7 @@ export const publications: Publication[] = [
   title = {Maximizing {Synchronization} {Coverage} {Via} {Controlling} {Thread} {Schedule}},
   url = {https://ieeexplore.ieee.org/abstract/document/5766365},
   doi = {10.1109/CCNC.2011.5766365},
-  booktitle = {2011 IEEE Consumer Communications and Networking Conference ({CNCC'11})},
+  booktitle = {2011 IEEE Consumer Communications and Networking Conference ({CCNC'11})},
   author = {Kim, HyoYoung and Cho, DaeHyun and Moon, Sungdo},
   month = jan,
   year = {2011},

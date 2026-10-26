@@ -9,71 +9,85 @@
   }
 }
 
-/* Root Design Tokens & Color Scheme Architecture */
+/* Root Design Tokens & Color Scheme Architecture (Google Official Palette & Fonts) */
 :root {
-  /* Raw Light Tokens */
-  --bg-canvas-light: #f8fafc;
+  /* Google Brand Core Colors */
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #fbbc04;
+  --google-green: #34a853;
+
+  /* Raw Light Tokens (Google Grey & Blue Light) */
+  --bg-canvas-light: #f8f9fa;
   --bg-surface-light: #ffffff;
-  --bg-subtle-light: #f1f5f9;
-  --bg-badge-light: #eef2ff;
-  --text-primary-light: #0f172a;
-  --text-secondary-light: #334155;
-  --text-muted-light: #475569;
-  --border-subtle-light: #cbd5e1;
-  --border-strong-light: #64748b;
-  --accent-light: #2563eb;
-  --accent-hover-light: #1d4ed8;
-  --accent-subtle-light: #dbeafe;
-  --focus-ring-light: #2563eb;
+  --bg-subtle-light: #f1f3f4;
+  --bg-badge-light: #e8f0fe;
+  --text-primary-light: #202124;
+  --text-secondary-light: #3c4043;
+  --text-muted-light: #5f6368;
+  --border-subtle-light: #dadce0;
+  --border-strong-light: #80868b;
+  --accent-light: #1a73e8;
+  --accent-hover-light: #1557b0;
+  --accent-subtle-light: #e8f0fe;
+  --focus-ring-light: #1a73e8;
 
-  /* Multi-Accent Palette (Light) */
-  --indigo-text-light: #4338ca;
-  --indigo-bg-light: #eef2ff;
-  --indigo-border-light: #a5b4fc;
+  /* Google 4-Color Semantic Accents (Light) */
+  /* Google Blue */
+  --indigo-text-light: #1967d2;
+  --indigo-bg-light: #e8f0fe;
+  --indigo-border-light: #aecbfa;
 
-  --teal-text-light: #0f766e;
-  --teal-bg-light: #f0fdfa;
-  --teal-border-light: #5eead4;
+  /* Google Green */
+  --teal-text-light: #137333;
+  --teal-bg-light: #e6f4ea;
+  --teal-border-light: #81c995;
 
-  --amber-text-light: #b45309;
-  --amber-bg-light: #fffbeb;
-  --amber-border-light: #fcd34d;
+  /* Google Yellow */
+  --amber-text-light: #b06000;
+  --amber-bg-light: #fef7e0;
+  --amber-border-light: #fdd663;
 
-  --rose-text-light: #be123c;
-  --rose-bg-light: #fff1f2;
-  --rose-border-light: #fda4af;
+  /* Google Red */
+  --rose-text-light: #c5221f;
+  --rose-bg-light: #fce8e6;
+  --rose-border-light: #f28b82;
 
-  /* Raw Dark Tokens */
-  --bg-canvas-dark: #090d16;
-  --bg-surface-dark: #111827;
-  --bg-subtle-dark: #1e293b;
-  --bg-badge-dark: #1e293b;
-  --text-primary-dark: #f8fafc;
-  --text-secondary-dark: #cbd5e1;
-  --text-muted-dark: #94a3b8;
-  --border-subtle-dark: #334155;
-  --border-strong-dark: #64748b;
-  --accent-dark: #60a5fa;
-  --accent-hover-dark: #93c5fd;
-  --accent-subtle-dark: #1e3a8a;
-  --focus-ring-dark: #60a5fa;
+  /* Raw Dark Tokens (Google Grey 900 Dark Theme) */
+  --bg-canvas-dark: #202124;
+  --bg-surface-dark: #292a2d;
+  --bg-subtle-dark: #303134;
+  --bg-badge-dark: #303134;
+  --text-primary-dark: #e8eaed;
+  --text-secondary-dark: #bdc1c6;
+  --text-muted-dark: #9aa0a6;
+  --border-subtle-dark: #3c4043;
+  --border-strong-dark: #80868b;
+  --accent-dark: #8ab4f8;
+  --accent-hover-dark: #aecbfa;
+  --accent-subtle-dark: #174ea6;
+  --focus-ring-dark: #8ab4f8;
 
-  /* Multi-Accent Palette (Dark) */
-  --indigo-text-dark: #a5b4fc;
-  --indigo-bg-dark: #1e1b4b;
-  --indigo-border-dark: #4f46e5;
+  /* Google 4-Color Semantic Accents (Dark) */
+  /* Google Blue (Dark) */
+  --indigo-text-dark: #8ab4f8;
+  --indigo-bg-dark: #1c2b41;
+  --indigo-border-dark: #4285f4;
 
-  --teal-text-dark: #5eead4;
-  --teal-bg-dark: #042f2e;
-  --teal-border-dark: #0d9488;
+  /* Google Green (Dark) */
+  --teal-text-dark: #81c995;
+  --teal-bg-dark: #163024;
+  --teal-border-dark: #34a853;
 
-  --amber-text-dark: #fcd34d;
-  --amber-bg-dark: #451a03;
-  --amber-border-dark: #d97706;
+  /* Google Yellow (Dark) */
+  --amber-text-dark: #fdd663;
+  --amber-bg-dark: #362b14;
+  --amber-border-dark: #f9ab00;
 
-  --rose-text-dark: #fda4af;
-  --rose-bg-dark: #4c0519;
-  --rose-border-dark: #e11d48;
+  /* Google Red (Dark) */
+  --rose-text-dark: #f28b82;
+  --rose-bg-dark: #3a1f21;
+  --rose-border-dark: #ea4335;
 
   /* Default fallback tokens (Light) */
   --bg-canvas: var(--bg-canvas-light);
@@ -244,13 +258,14 @@
   /* Enable smooth animation to intrinsic keywords */
   interpolate-size: allow-keywords;
 
-  /* Typography & Spacing */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  /* Google Official Typography & Spacing */
+  --font-display: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Google Sans Text', 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Google Sans Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --max-width: 54rem;
-  --radius-sm: 0.375rem;
-  --radius-md: 0.625rem;
-  --radius-lg: 0.875rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
 }
 
 /* Forced Colors Mode Support */
@@ -307,8 +322,8 @@ body {
   flex-direction: column;
   background-color: var(--bg-canvas);
   background-image:
-    radial-gradient(ellipse 80% 36rem at 15% -6rem, color-mix(in oklab, var(--indigo-bg) 80%, transparent), transparent),
-    radial-gradient(ellipse 65% 32rem at 85% -4rem, color-mix(in oklab, var(--teal-bg) 75%, transparent), transparent);
+    radial-gradient(ellipse 75% 34rem at 12% -6rem, color-mix(in oklab, var(--indigo-bg) 75%, transparent), transparent),
+    radial-gradient(ellipse 60% 30rem at 88% -4rem, color-mix(in oklab, var(--teal-bg) 70%, transparent), transparent);
   background-repeat: no-repeat;
   color: var(--text-primary);
 }
@@ -345,8 +360,8 @@ code {
 pre {
   color-scheme: dark;
   accent-color: var(--accent);
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: #202124;
+  color: #e8eaed;
   padding: 1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-subtle);
@@ -368,12 +383,12 @@ main#main-content {
   padding-block: 2.5rem 4rem;
 }
 
-/* Top Navigation Header with Colorful Accent Ribbon */
+/* Top Navigation Header with Google 4-Color Accent Ribbon */
 .site-header {
   position: sticky;
   inset-block-start: 0;
   z-index: 40;
-  background-color: color-mix(in oklab, var(--bg-canvas) 86%, transparent);
+  background-color: color-mix(in oklab, var(--bg-surface) 90%, transparent);
   backdrop-filter: blur(12px);
   border-block-end: 1px solid var(--border-subtle);
 }
@@ -381,8 +396,14 @@ main#main-content {
 .site-header::before {
   content: '';
   display: block;
-  block-size: 3px;
-  background: linear-gradient(90deg, var(--accent), var(--indigo-text), var(--teal-text), var(--amber-text));
+  block-size: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--google-blue) 0% 25%,
+    var(--google-red) 25% 50%,
+    var(--google-yellow) 50% 75%,
+    var(--google-green) 75% 100%
+  );
 }
 
 .header-inner {
@@ -394,9 +415,10 @@ main#main-content {
 }
 
 .brand-link {
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  font-size: 1.075rem;
+  letter-spacing: -0.015em;
   color: var(--text-primary);
   text-decoration: none;
   display: inline-flex;
@@ -405,11 +427,16 @@ main#main-content {
 }
 
 .brand-dot {
-  inline-size: 0.55rem;
-  block-size: 0.55rem;
+  inline-size: 0.6rem;
+  block-size: 0.6rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--teal-text));
-  border: 1px solid var(--border-subtle);
+  background: conic-gradient(
+    from 315deg,
+    var(--google-blue) 0deg 90deg,
+    var(--google-green) 90deg 180deg,
+    var(--google-yellow) 180deg 270deg,
+    var(--google-red) 270deg 360deg
+  );
 }
 
 .brand-link:hover {
@@ -433,10 +460,11 @@ main#main-content {
 }
 
 .nav-link {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
-  padding: 0.4rem 0.75rem;
-  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
   font-size: 0.925rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -536,8 +564,9 @@ h1,
 h2,
 h3,
 h4 {
+  font-family: var(--font-display);
   color: var(--text-primary);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   line-height: 1.25;
   margin-block: 0;
 }
@@ -571,9 +600,10 @@ h4 {
 }
 
 .section-title {
-  font-size: 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.01em;
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -605,6 +635,7 @@ h4 {
 }
 
 .section-link {
+  font-family: var(--font-display);
   font-size: 0.875rem;
   font-weight: 500;
   display: inline-flex;
@@ -631,11 +662,18 @@ h4 {
 }
 
 .hero-name {
+  font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 2.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   margin-block-end: 0.5rem;
-  background: linear-gradient(120deg, var(--text-primary) 15%, var(--indigo-text) 60%, var(--teal-text) 100%);
+  background: linear-gradient(
+    115deg,
+    var(--text-primary) 10%,
+    var(--google-blue) 50%,
+    var(--google-red) 78%,
+    var(--google-green) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -649,10 +687,20 @@ h4 {
 }
 
 .hero-tagline {
+  font-family: var(--font-display);
   font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-block: 0 0.65rem;
+  max-inline-size: 62ch;
+}
+
+.hero-bio {
+  font-size: 0.95rem;
   color: var(--text-secondary);
+  line-height: 1.65;
   margin-block: 0 1.25rem;
-  max-inline-size: 58ch;
+  max-inline-size: 64ch;
 }
 
 .affiliation-list {
@@ -674,12 +722,13 @@ h4 {
 }
 
 .role-badge {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
-  padding: 0.14rem 0.6rem;
-  border-radius: var(--radius-sm);
+  padding: 0.14rem 0.65rem;
+  border-radius: 999px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   background-color: var(--indigo-bg);
   color: var(--indigo-text);
   border: 1px solid var(--indigo-border);
@@ -700,7 +749,13 @@ h4 {
 .hero-avatar-wrap {
   padding: 4px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--indigo-text), var(--teal-text), var(--amber-text));
+  background: conic-gradient(
+    from 315deg,
+    var(--google-blue) 0deg 100deg,
+    var(--google-green) 100deg 190deg,
+    var(--google-yellow) 190deg 260deg,
+    var(--google-red) 260deg 360deg
+  );
   display: inline-block;
 }
 
@@ -724,11 +779,12 @@ h4 {
 }
 
 .social-pill {
+  font-family: var(--font-display);
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-surface);
   color: var(--text-secondary);
@@ -815,12 +871,14 @@ h4 {
 }
 
 .timeline-role {
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .timeline-org {
+  font-family: var(--font-display);
   font-weight: 600;
   color: var(--accent);
 }
@@ -912,6 +970,7 @@ h4 {
 }
 
 .pub-title {
+  font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -987,12 +1046,12 @@ h4 {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
-  font-family: inherit;
+  padding: 0.25rem 0.7rem;
+  font-family: var(--font-display);
   font-size: 0.78rem;
   font-weight: 500;
   line-height: 1.4;
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   border: 1px solid var(--border-subtle);
   background-color: var(--bg-subtle);
   color: var(--text-secondary);
@@ -1030,6 +1089,71 @@ h4 {
   line-height: 1.6;
 }
 
+.pub-bibtex-wrap {
+  margin-block-start: 0.65rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background-color: #202124;
+  overflow: hidden;
+}
+
+.pub-bibtex-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  background-color: #292a2d;
+  border-block-end: 1px solid #3c4043;
+}
+
+.pub-bibtex-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #9aa0a6;
+}
+
+.bibtex-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid #5f6368;
+  background-color: #303134;
+  color: #e8eaed;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.bibtex-copy-btn:hover {
+  border-color: #8ab4f8;
+  color: #8ab4f8;
+  background-color: #1c2b41;
+}
+
+.bibtex-copy-btn.is-copied {
+  border-color: #34a853;
+  color: #81c995;
+  background-color: #163024;
+}
+
+.bibtex-copy-btn .copy-state-default:not([hidden]),
+.bibtex-copy-btn .copy-state-copied:not([hidden]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pub-bibtex-wrap pre {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
 /* Expertise Chips */
 .chip-list {
   display: flex;
@@ -1041,8 +1165,9 @@ h4 {
 }
 
 .chip {
-  padding: 0.32rem 0.75rem;
-  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  padding: 0.32rem 0.8rem;
+  border-radius: 999px;
   border: 1px solid var(--teal-border);
   background-color: var(--teal-bg);
   font-size: 0.85rem;

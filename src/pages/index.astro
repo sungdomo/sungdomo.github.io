@@ -12,7 +12,9 @@ import {
 } from '../data/siteData';
 
 const primarySocials = socialLinks.filter((s) => s.category === 'primary' || s.label === 'ORCID');
-const academicSocials = socialLinks.filter((s) => s.category === 'academic' || s.category === 'social');
+const academicSocials = socialLinks.filter(
+  (s) => (s.category === 'academic' || s.category === 'social') && s.label !== 'ORCID',
+);
 const selectedPubs = publications.filter((p) => p.selected);
 const featuredExperience = experienceItems.slice(0, 4);
 ---
@@ -26,7 +28,7 @@ const featuredExperience = experienceItems.slice(0, 4);
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-content">
       <h1 id="hero-heading" class="hero-name">{profile.name}</h1>
-      <p class="hero-tagline">{profile.tagline}</p>
+      <p class="hero-bio">{profile.bio}</p>
 
       <ul class="affiliation-list" aria-label="Current roles">
         {profile.currentAffiliations.map((aff) => (
@@ -94,6 +96,18 @@ const featuredExperience = experienceItems.slice(0, 4);
         fetchpriority="high"
       />
     </div>
+  </section>
+
+  <!-- Areas of Expertise -->
+  <section class="section-block accent-teal" aria-labelledby="expertise-heading">
+    <div class="section-header">
+      <h2 id="expertise-heading" class="section-title">Areas of Expertise</h2>
+    </div>
+    <ul class="chip-list">
+      {profile.expertise.map((skill) => (
+        <li class="chip">{skill}</li>
+      ))}
+    </ul>
   </section>
 
   <!-- Recent News -->
@@ -172,7 +186,17 @@ const featuredExperience = experienceItems.slice(0, 4);
               ) : (
                 <em>{edu.dissertation}</em>
               )}
-              {edu.advisor ? ` (Advisor: ${edu.advisor})` : ''}
+              {edu.advisor && (
+                <>
+                  {' (Advisor: '}
+                  {edu.advisorUrl ? (
+                    <a href={edu.advisorUrl} target="_blank" rel="noopener noreferrer">{edu.advisor}</a>
+                  ) : (
+                    edu.advisor
+                  )}
+                  {')'}
+                </>
+              )}
             </div>
           )}
         </li>

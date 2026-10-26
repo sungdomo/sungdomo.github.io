@@ -104,7 +104,16 @@ import {
                   <em>{edu.dissertation}</em>
                 )}
               </li>
-              {edu.advisor && <li>Advisor: {edu.advisor}</li>}
+              {edu.advisor && (
+                <li>
+                  Advisor:{' '}
+                  {edu.advisorUrl ? (
+                    <a href={edu.advisorUrl} target="_blank" rel="noopener noreferrer">{edu.advisor}</a>
+                  ) : (
+                    edu.advisor
+                  )}
+                </li>
+              )}
             </ul>
           )}
         </li>

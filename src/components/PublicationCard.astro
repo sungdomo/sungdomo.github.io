@@ -11,6 +11,9 @@ const primaryLink = pub.url || (pub.doi ? `https://doi.org/${pub.doi}` : undefin
 const scholarUrl = pub.scholarId
   ? `https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PuD26bsAAAAJ&citation_for_view=PuD26bsAAAAJ:${pub.scholarId}`
   : undefined;
+const authorLinks: Record<string, string> = {
+  'Mary W. Hall': 'https://users.cs.utah.edu/~mhall/',
+};
 ---
 
 <article class="pub-card" id={pub.id} data-pub-type={pub.type}>
@@ -32,6 +35,8 @@ const scholarUrl = pub.scholarId
       <>
         {author === 'Sungdo Moon' ? (
           <span class="pub-author-self">{author}</span>
+        ) : authorLinks[author] ? (
+          <a href={authorLinks[author]} target="_blank" rel="noopener noreferrer">{author}</a>
         ) : (
           <span>{author}</span>
         )}
@@ -86,13 +91,54 @@ const scholarUrl = pub.scholarId
   </div>
 
   <div id={`bibtex-${pub.id}`} class="pub-panel no-print" hidden="until-found">
-    <pre><code>{pub.bibtex}</code></pre>
+    <div class="pub-bibtex-wrap">
+      <div class="pub-bibtex-bar">
+        <span class="pub-bibtex-label">BibTeX Citation</span>
+        <button
+          type="button"
+          class="bibtex-copy-btn"
+          data-bibtex={pub.bibtex}
+          aria-label={`Copy BibTeX for ${pub.title}`}
+        >
+          <span class="copy-state-default">
+            <Icon name="copy" size={13} />
+            <span>Copy BibTeX</span>
+          </span>
+          <span class="copy-state-copied" hidden>
+            <Icon name="check" size={13} />
+            <span>Copied!</span>
+          </span>
+        </button>
+      </div>
+      <pre><code>{pub.bibtex}</code></pre>
+    </div>
   </div>
 </article>
 
 <script>
-  document.addEventListener('click', (event) => {
+  document.addEventListener('click', async (event) => {
     const target = event.target as HTMLElement | null;
+
+    const copyBtn = target?.closest<HTMLButtonElement>('.bibtex-copy-btn');
+    if (copyBtn) {
+      const bibtex = copyBtn.getAttribute('data-bibtex');
+      if (!bibtex) return;
+      try {
+        await navigator.clipboard.writeText(bibtex);
+        const defaultEl = copyBtn.querySelector<HTMLElement>('.copy-state-default');
+        const copiedEl = copyBtn.querySelector<HTMLElement>('.copy-state-copied');
+        copyBtn.classList.add('is-copied');
+        if (defaultEl) defaultEl.hidden = true;
+        if (copiedEl) copiedEl.hidden = false;
+        window.setTimeout(() => {
+          copyBtn.classList.remove('is-copied');
+          if (defaultEl) defaultEl.hidden = false;
+          if (copiedEl) copiedEl.hidden = true;
+        }, 2000);
+      } catch {}
+      return;
+    }
+
     const btn = target?.closest<HTMLButtonElement>('.pub-toggle-btn');
     if (!btn) return;
 
